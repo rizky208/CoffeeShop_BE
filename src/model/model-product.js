@@ -58,7 +58,7 @@ const productModel = {
               `INSERT INTO product_image (id_image, id_product, name, alt_name, filename) VALUES($1, $2 ,$3 , $4, $5)`,
               [uuidv4(), result.rows[0].id, name, name, img]
             );
-            return resolve({ name, description, price, category });
+            return resolve({ name, description, price, category, img });
           }
         }
       );

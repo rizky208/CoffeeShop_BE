@@ -80,7 +80,7 @@ const productController = {
     return productModel
       .remove(req.params.id)
       .then((result) => {
-        unlink(`uploads/${result.filename}`, (err) => {
+        unlink(`uploads/${result.img}`, (err) => {
           if (err) throw err;
           console.log(`successfully deleted ${result.filename}`);
         });

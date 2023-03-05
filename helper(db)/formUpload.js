@@ -2,7 +2,7 @@ const multer = require("multer");
 const path = require("path");
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "uploads/"); //mulainya dari ttik root folder (coffeshop_be)
+    cb(null, "public/uploads/images/"); //mulainya dari ttik root folder (coffeshop_be)
   },
   filename: (req, file, cb) => {
     // let fileName = file.originalname.split('.')

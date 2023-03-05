@@ -16,7 +16,7 @@ const orderModel = {
       db.query(
         `SELECT orders.id, product.name, product.price, orders.item_id, orders.quantity, orders.total_price
         FROM orders
-        INNER JOIN product ON orders.tem_iid=product.id ${this.query(
+        INNER JOIN product ON orders.item_id=product.id ${this.query(
           queryParams,
           queryParams.sortBy,
           queryParams.limit
@@ -58,7 +58,7 @@ const orderModel = {
       );
     });
   },
-  
+
   update: ({ id, name, deskripsi, price, category }) => {
     return new Promise((resolve, reject) => {
       db.query(`SELECT * FROM orders WHERE id='${id}'`, (err, result) => {

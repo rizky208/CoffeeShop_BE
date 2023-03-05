@@ -4,6 +4,7 @@ const express = require("express");
 const app = express();
 const router = require("./src/route/route-index");
 const cors = require("cors");
+app.use("/uploads", express.static("uploads"));
 
 app.use(urlencoded({ extended: true }));
 //menerima json
@@ -24,6 +25,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, (req, res) => {
-  console.log("backend successfully running on port 3000");
+app.listen(5000, (req, res) => {
+  console.log("Coffee Shop backend successfully running on port 5000");
 });

@@ -11,9 +11,9 @@ const db = new Client({
 
 db.connect((err) => {
   if (!err) {
-    console.log("Database CONNECTED");
+    console.log("Database CoffeeSHop CONNECTED");
   } else {
-    console.log("Database error connection", err);
+    console.log("Database Connection Failed", err);
   }
 });
 
